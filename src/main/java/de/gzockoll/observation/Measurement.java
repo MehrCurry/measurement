@@ -15,7 +15,7 @@ public class Measurement extends Observation {
 		this.quantity = quantity;
 	}
 
-	public Measurement(String name, PhanomenonType type, Unit unit, double value) {
+	public Measurement(String name, PhanomenonType type, Unit unit, Number value) {
 		this(new NamedSubject(name), type, new NumberQuantity(unit, value));
 	}
 
