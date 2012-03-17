@@ -1,2 +1,6 @@
 /.settings
 /target
+/data
+/.project
+/.classpath
+/.springBeans
