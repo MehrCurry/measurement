@@ -6,8 +6,7 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>de.gzockoll.prototype.camel</groupId>
-	<artifactId>camel-test</artifactId>
+	<groupId>de.gzockoll.prototype</groupId>
 	<packaging>bundle</packaging>
 	<issueManagement>
 		<system>JIRA</system>
@@ -245,4 +244,5 @@
 			</plugins>
 		</pluginManagement>
 	</build>
+	<artifactId>measurement</artifactId>
 </project>
