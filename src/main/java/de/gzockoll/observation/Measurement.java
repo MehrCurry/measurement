@@ -3,22 +3,25 @@ package de.gzockoll.observation;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.measure.Measurable;
-
 import org.codehaus.jettison.json.JSONObject;
 
 public class Measurement extends Observation {
 	private PhanomenonType type;
-	private Measurable quantity;
+	private Quantity quantity;
 
-	public Measurement(Subject subject, PhanomenonType type, Measurable quantity) {
+	public Measurement(Subject subject, PhanomenonType type, Quantity quantity) {
 		super(subject);
 		this.type = type;
 		this.quantity = quantity;
 	}
 
+	public Measurement(Subject subject, PhanomenonType type, Unit unit,
+			Number value) {
+		this(subject, type, new NumberQuantity(unit, value));
+	}
+
 	@Override
-	public Measurable getValue() {
+	public Quantity getValue() {
 		return quantity;
 	}
 
@@ -31,10 +34,10 @@ public class Measurement extends Observation {
 	public String toJSON() {
 		Map<String, Object> entries = new HashMap<String, Object>();
 
-		 entries.put("key", subject.getName() + "." + type);
-		 entries.put("value", quantity.);
-		 entries.put("timeTaken", timeTaken);
-		 entries.put("unit", quantity.);
+		entries.put("key", subject.getName() + "." + type);
+		entries.put("value", quantity.getValue());
+		entries.put("timeTaken", timeTaken);
+		entries.put("unit", quantity.getUnit());
 
 		return new JSONObject(entries).toString();
 	}
