@@ -39,7 +39,7 @@
 		level="WARN" /> <logger name="org.springframework" level="WARN" /> -->
 	<logger name="de.gzockoll.prototype" level="DEBUG" />
 
-	<root level="OFF">
+	<root level="INFO">
 		<appender-ref ref="CONSOLE" />
 		<appender-ref ref="FILE" />
 		<appender-ref ref="multiplex" />
