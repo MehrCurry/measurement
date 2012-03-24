@@ -18,9 +18,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import de.gzockoll.observation.Measurement;
-import de.gzockoll.observation.NamedSubject;
 import de.gzockoll.observation.Observation;
-import de.gzockoll.observation.Subject;
 
 public class MetarProcessor implements Processor {
 	private static final Logger logger = LoggerFactory
@@ -39,7 +37,7 @@ public class MetarProcessor implements Processor {
 		Metar metar = MetarParser.parseRecord(data);
 		logger.debug("Metar: " + metar);
 		List<Observation> list = new ArrayList<Observation>();
-		Subject station = new NamedSubject(metar.getStationID());
+		String station = metar.getStationID();
 		list.add(new Measurement(station, TEMPERATUR, DEGREE_CELSIUS, metar
 				.getTemperatureMostPreciseInCelsius()));
 		list.add(new Measurement(station, LUFTDRUCK, HECTOPASCAL, metar
