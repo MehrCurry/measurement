@@ -1,6 +1,6 @@
 package de.gzockoll.observation;
 
-public interface Quantity {
+public interface Quantity extends Comparable<Quantity> {
 
 	Number getValue();
 

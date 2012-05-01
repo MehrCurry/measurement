@@ -5,7 +5,7 @@ import java.util.Map;
 
 import org.codehaus.jettison.json.JSONObject;
 
-public class Measurement extends Observation {
+public class Measurement extends Observation implements Comparable<Measurement> {
 	private PhanomenonType type;
 	private Quantity quantity;
 
@@ -24,6 +24,14 @@ public class Measurement extends Observation {
 		return quantity;
 	}
 
+	public PhanomenonType getType() {
+		return type;
+	}
+
+	public Quantity getQuantity() {
+		return quantity;
+	}
+
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -33,11 +41,23 @@ public class Measurement extends Observation {
 	public String toJSON() {
 		Map<String, Object> entries = new HashMap<String, Object>();
 
-		entries.put("key", subject.getName() + "." + type);
+		entries.put("key", getKey());
 		entries.put("value", quantity.getValue());
 		entries.put("timeTaken", timeTaken);
 		entries.put("unit", quantity.getUnit());
 
 		return new JSONObject(entries).toString();
+	}
+
+	public String getKey() {
+		return subject.getName() + "." + type;
+	}
+
+	@Override
+	public int compareTo(Measurement other) {
+		if (type != other.type)
+			throw new IllegalArgumentException("Could not compare with "
+					+ other);
+		return quantity.compareTo(other.quantity);
 	}
 }

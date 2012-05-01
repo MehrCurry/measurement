@@ -19,4 +19,12 @@ public class NumberQuantity implements Quantity {
 	public Number getValue() {
 		return value;
 	}
+
+	@Override
+	public int compareTo(Quantity o) {
+		if (unit != o.getUnit())
+			throw new IllegalArgumentException();
+		return Double.valueOf(value.doubleValue()).compareTo(
+				Double.valueOf(o.getValue().doubleValue()));
+	}
 }

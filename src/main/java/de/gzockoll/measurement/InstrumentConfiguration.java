@@ -15,6 +15,7 @@ import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
  * 
  */
 public class InstrumentConfiguration {
+	private String instrumentKey = null;
 	private String name = null;
 	private String title = null;
 	private String unit = null;
@@ -43,6 +44,11 @@ public class InstrumentConfiguration {
 
 		public Builder name(String name) {
 			conf.name = name;
+			return this;
+		}
+
+		public Builder instrument(String key) {
+			conf.instrumentKey = key;
 			return this;
 		}
 
