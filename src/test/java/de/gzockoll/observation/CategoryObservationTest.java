@@ -5,12 +5,6 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import de.gzockoll.observation.CategoryObservation;
-import de.gzockoll.observation.Observation;
-import de.gzockoll.observation.Phanomenon;
-import de.gzockoll.observation.PhanomenonType;
-import de.gzockoll.observation.Subject;
-
 public class CategoryObservationTest {
 
 	@Test

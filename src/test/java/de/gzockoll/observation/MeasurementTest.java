@@ -1,18 +1,10 @@
 package de.gzockoll.observation;
 
 import static org.hamcrest.core.Is.*;
-import static org.junit.matchers.JUnitMatchers.*;
 import static org.junit.Assert.*;
+import static org.junit.matchers.JUnitMatchers.*;
 
 import org.junit.Test;
-
-import de.gzockoll.observation.Measurement;
-import de.gzockoll.observation.NumberQuantity;
-import de.gzockoll.observation.Observation;
-import de.gzockoll.observation.PhanomenonType;
-import de.gzockoll.observation.Quantity;
-import de.gzockoll.observation.Subject;
-import de.gzockoll.observation.Unit;
 
 public class MeasurementTest {
 

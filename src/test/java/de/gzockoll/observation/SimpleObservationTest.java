@@ -4,12 +4,10 @@
  */
 package de.gzockoll.observation;
 
-import static org.junit.matchers.JUnitMatchers.*;
 import static org.junit.Assert.*;
+import static org.junit.matchers.JUnitMatchers.*;
 
 import org.junit.Test;
-
-import de.gzockoll.observation.SimpleObservation;
 
 /**
  * @author Guido Zockoll

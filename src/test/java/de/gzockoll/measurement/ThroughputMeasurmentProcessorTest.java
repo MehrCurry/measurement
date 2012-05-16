@@ -6,8 +6,6 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import de.gzockoll.measurement.ThroughputMeasurmentProcessor;
-
 public class ThroughputMeasurmentProcessorTest {
 	private ThroughputMeasurmentProcessor bus;
 
