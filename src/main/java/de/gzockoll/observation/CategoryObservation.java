@@ -15,11 +15,6 @@ public class CategoryObservation extends Observation {
 		return phanomenon;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see de.gzockoll.prototype.camel.observation.Observation#toJSON()
-	 */
 	@Override
 	public String toJSON() {
 		return new JSONObject(this, new String[] { "1", "2" }).toString();

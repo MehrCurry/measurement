@@ -32,11 +32,6 @@ public class Measurement extends Observation implements Comparable<Measurement> 
 		return quantity;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see de.gzockoll.prototype.camel.observation.Observation#toJSON()
-	 */
 	@Override
 	public String toJSON() {
 		Map<String, Object> entries = new HashMap<String, Object>();

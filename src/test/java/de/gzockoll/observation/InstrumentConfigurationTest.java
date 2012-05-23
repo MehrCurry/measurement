@@ -17,11 +17,6 @@ import de.gzockoll.measurement.InstrumentConfiguration;
  */
 public class InstrumentConfigurationTest {
 
-	/**
-	 * Test method for
-	 * {@link de.gzockoll.prototype.camel.measurement.InstrumentConfiguration#builder()}
-	 * .
-	 */
 	@Test
 	public void testBuilder() {
 		InstrumentConfiguration conf = InstrumentConfiguration.builder()
