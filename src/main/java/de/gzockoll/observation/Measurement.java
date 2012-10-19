@@ -20,8 +20,8 @@ public class Measurement extends Observation implements Comparable<Measurement> 
 	}
 
 	@Override
-	public Quantity getValue() {
-		return quantity;
+	public Number getValue() {
+		return quantity.getValue();
 	}
 
 	public PhanomenonType getType() {
