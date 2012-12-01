@@ -1,7 +1,16 @@
 package de.gzockoll.measurement;
 
-import static de.gzockoll.measurement.MetarMesswerte.*;
-import static de.gzockoll.observation.Units.*;
+import static de.gzockoll.measurement.MetarMesswerte.LUFTDRUCK;
+import static de.gzockoll.measurement.MetarMesswerte.SICHT;
+import static de.gzockoll.measurement.MetarMesswerte.TAUPUNKT;
+import static de.gzockoll.measurement.MetarMesswerte.TEMPERATUR;
+import static de.gzockoll.measurement.MetarMesswerte.WIND;
+import static de.gzockoll.measurement.MetarMesswerte.WINDRICHTUNG;
+import static de.gzockoll.observation.Units.DEGREE;
+import static de.gzockoll.observation.Units.DEGREE_CELSIUS;
+import static de.gzockoll.observation.Units.HECTOPASCAL;
+import static de.gzockoll.observation.Units.KILOMETER;
+import static de.gzockoll.observation.Units.METER_PER_SECOND;
 
 import java.util.ArrayList;
 import java.util.List;
