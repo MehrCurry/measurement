@@ -1,9 +1,5 @@
 package de.gzockoll.observation;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import org.codehaus.jettison.json.JSONObject;
 
 public class Measurement extends Observation implements Comparable<Measurement> {
 	private PhanomenonType type;
@@ -30,18 +26,6 @@ public class Measurement extends Observation implements Comparable<Measurement> 
 
 	public Quantity getQuantity() {
 		return quantity;
-	}
-
-	@Override
-	public String toJSON() {
-		Map<String, Object> entries = new HashMap<String, Object>();
-
-		entries.put("key", getKey());
-		entries.put("value", quantity.getValue());
-		entries.put("timeTaken", timeTaken);
-		entries.put("unit", quantity.getUnit());
-
-		return new JSONObject(entries).toString();
 	}
 
 	public String getKey() {

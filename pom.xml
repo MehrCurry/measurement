@@ -66,31 +66,9 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>net.sourceforge.jweather</groupId>
-			<artifactId>jweather</artifactId>
-			<version>0.3.0</version>
-			<scope>provided</scope>
-			<exclusions>
-				<exclusion>
-					<artifactId>commons-logging</artifactId>
-					<groupId>commons-logging</groupId>
-				</exclusion>
-				<exclusion>
-					<artifactId>commons-lang</artifactId>
-					<groupId>commons-lang</groupId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
 			<version>3.1</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.codehaus.jettison</groupId>
-			<artifactId>jettison</artifactId>
-			<version>1.3.1</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>

@@ -1,6 +1,5 @@
 package de.gzockoll.observation;
 
-import org.codehaus.jettison.json.JSONObject;
 
 public class CategoryObservation extends Observation {
 	private Phanomenon phanomenon;
@@ -13,10 +12,5 @@ public class CategoryObservation extends Observation {
 	@Override
 	public Object getValue() {
 		return phanomenon;
-	}
-
-	@Override
-	public String toJSON() {
-		return new JSONObject(this, new String[] { "1", "2" }).toString();
 	}
 }

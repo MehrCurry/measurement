@@ -1,5 +1,6 @@
 package de.gzockoll.observation;
 
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.joda.time.DateTime;
 
 public abstract class Observation {
@@ -13,11 +14,8 @@ public abstract class Observation {
 
     @Override
     public String toString() {
-        return toJSON();
-        // return ReflectionToStringBuilder.toString(this);
+        return ReflectionToStringBuilder.toString(this);
     }
-
-    public abstract String toJSON();
 
     public abstract Object getValue();
 }

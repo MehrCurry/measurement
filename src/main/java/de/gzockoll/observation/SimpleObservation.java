@@ -4,8 +4,6 @@
  */
 package de.gzockoll.observation;
 
-import org.codehaus.jettison.json.JSONException;
-import org.codehaus.jettison.json.JSONObject;
 
 /**
  * @author Guido Zockoll
@@ -26,17 +24,6 @@ public class SimpleObservation extends Observation {
 		super(null);
 		this.key = key;
 		this.value = value;
-	}
-
-	@Override
-	public String toJSON() {
-
-		try {
-			return new JSONObject().put("key", key).put("value", value)
-					.toString();
-		} catch (JSONException e) {
-			throw new RuntimeException(e);
-		}
 	}
 
 	/*
