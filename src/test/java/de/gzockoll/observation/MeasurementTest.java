@@ -18,14 +18,6 @@ public class MeasurementTest {
 			}
 		}, new NumberQuantity(Units.DEGREE_CELSIUS, 0.0));
 		assertThat((Double) o.getValue(), is(0.0));
-
-		String s = o.toString();
-		assertThat(s.startsWith("{"), is(true));
-		assertThat(s.endsWith("}"), is(true));
-
-		System.out.println(s);
-		assertThat(s, containsString("\"key\":\"JUnit.TEMPERATURE\""));
-		assertThat(s, containsString("\"value\":0"));
 	}
 
 	private static enum PhaenomenonTypes implements PhanomenonType {
